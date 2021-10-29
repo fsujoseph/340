@@ -1,67 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <link rel="stylesheet" href="styling.css">
-  <meta charset="UTF-8">
-  <title>Title</title>
+    <link rel="stylesheet" href="ordersstyling.css">
+    <meta charset="UTF-8">
+    <title>Orders</title>
 </head>
+
 <body>
-  <div class="header">
-    <h1>BRUH TECH</h1>
-    <p>Orders</p>
-    <p>This page is for adding orders to the database</p>
-</div>
-<table>
-  <tr>
-    <th colspan = "3">Orders</th>
-  </tr>
-  <tr>
-    <th>orderID</th>
-    <th>customerID</th>
-    <th>orderDate</th>
-  </tr>
-  <tr>
-    <td>1</td>
-    <td>1</td>
-    <td>12/21/2012</td>
-  </tr>
+    <div class="navbar">
+        <a href="index.html">Home</a>
+        <a href="customers.html">Customers</a>
+        <a href="products.html">Products</a>
+        <a href="orders.html">Orders</a>
+        <a href="suppliers.html">Suppliers</a>
+    </div>
+    <div class="header">
+        <h1>BRUH TECH</h1>
+        <h2>Orders</h2>
+        <p>This page is for adding orders to the database</p>
+    </div>
+    <table>
+        <tr>
+            <th colspan="3">Orders</th>
+        </tr>
+        <tr>
+            <th>orderID</th>
+            <th>customerID</th>
+            <th>orderDate</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>1</td>
+            <td>12/21/2012</td>
+        </tr>
 
-</table>
-<p>
-<form action="">
-  <label for="custID">Customer ID</label>
-  <input type="text" id="custID" name="custID"><br><br>
-  <label for="date">Order Date</label>
-  <input type="text" id="date" name="date"><br><br>
-  <input type="submit" value="Submit">
-</form>
-</p>
-<table>
-  <tr>
-    <th colspan = "4">Order Items</th>
-  </tr>
-  <tr>
-    <th>orderItemID</th>
-    <th>orderID</th>
-    <th>productID</th>
-    <th>orderItemQuantity</th>
-  </tr>
-  <tr>
-    <td>1</td>
-    <td>1</td>
-    <td>1</td>
-    <td>1</td>
+    </table>
 
-  </tr>
-</table>
+    <form action="">
+        <p>Add Order</p>
+        <label for="custID">Customer ID:</label>
+        <input type="text" id="custID" name="custID"><br><br>
+        <label for="date">Order Date:</label>
+        <input type="text" id="date" name="date"><br><br>
+        <input type="submit" value="Add">
+    </form>
 
-<form action="">
-  <label for="orderID">Order ID</label>
-  <input type="text" id="orderID" name="orderID"><br><br>
-  <label for="quantity">Order Item Quantity</label>
-  <input type="text" id="quantity" name="quantity"><br><br>
-  <input type="submit" value="Submit">
-</form>
+
 
 </body>
+
 </html>

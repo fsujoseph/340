@@ -1,105 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <link rel="stylesheet" href="styling.css">
-  <meta charset="UTF-8">
-  <title>Title</title>
-</head>
-<body>
-  <div class="header">
-    <h1>BRUH TECH</h1>
-    <p>Products and Suppliers</p>
-    <p>This page is for managing products and suppliers</p>
-</div>
-<table>
-  <tr>
-    <th colspan = "4">Products</th>
-  </tr>
-  <tr>
-    <th>productID</th>
-    <th>productName</th>
-    <th>productPrice</th>
-    <th>productStock</th>
-  </tr>
-  <tr>
-    <td>1</td>
-    <td>Intel i9</td>
-    <td>1000</td>
-    <td>21</td>
-  </tr>
-</table>
-<p>
-<form action="">
-    <label for="name">Product Name</label>
-    <input type="text" id="name" name="name"><br><br>
-    <label for="price">Product Price</label>
-    <input type="text" id="price" name="price"><br><br>
-    <label for="stock">Product Stock</label>
-    <input type="text" id="stock" name="stock"><br><br>
-    <input type="submit" value="Submit">
-</form>
-</p>
-<table>
-  <tr>
-    <th colspan = "12">Suppliers</th>
-  </tr>
-  <tr>
-    <th>supplierID</th>
-    <th>productID</th>
-    <th>supplierCompany</th>
-    <th>supplierContact</th>
-    <th>supplierAddress</th>
-    <th>supplierZip</th>
-    <th>supplierCity</th>
-    <th>supplierState</th>
-    <th>supplierFax</th>
-    <th>supplierEmail</th>
-    <th>supplierURL</th>
-    <th>supplierNote</th>
-  </tr>
-  <tr>
-    <td>1</td>
-    <td>1</td>
-    <td>Intel</td>
-    <td>Joe Dirt</td>
-    <td>Golden Gate Bridge</td>
-    <td>94129</td>
-    <td>San Francisco</td>
-    <td>California</td>
-    <td>+1-212-9876543</td>
-    <td>intel@help.com</td>
-    <td>intel.com</td>
-    <td>Null</td>
-  </tr>
-</table>
 
-<p>
-<form action="">
-    <label for="productID">Product ID</label>
-    <input type="text" id="productID" name="productID"><br><br>
-    <label for="company">Supplier Company</label>
-    <input type="text" id="company" name="company"><br><br>
-    <label for="contact">Supplier Contact</label>
-    <input type="text" id="contact" name="contact"><br><br>
-    <label for="address">Supplier Address</label>
-    <input type="text" id="address" name="address"><br><br>
-    <label for="zip">Supplier Zipcode</label>
-    <input type="text" id="zip" name="zip"><br><br>
-    <label for="city">Supplier City</label>
-    <input type="text" id="city" name="city"><br><br>
-    <label for="state">Supplier State</label>
-    <input type="text" id="state" name="state"><br><br>
-    <label for="fax">Supplier Fax</label>
-    <input type="text" id="fax" name="fax"><br><br>
-    <label for="email">Supplier Email</label>
-    <input type="text" id="email" name="email"><br><br>
-    <label for="url">Supplier URL</label>
-    <input type="text" id="url" name="url"><br><br>
-    <label for="note">Supplier Note</label>
-    <input type="text" id="note" name="note"><br><br>
-    <input type="submit" value="Submit">
-</form>
-</p>
+<head>
+    <link rel="stylesheet" href="productsstyling.css">
+    <meta charset="UTF-8">
+    <title>Products</title>
+</head>
+
+<body>
+    <div class="navbar">
+        <a href="index.html">Home</a>
+        <a href="customers.html">Customers</a>
+        <a href="products.html">Products</a>
+        <a href="orders.html">Orders</a>
+        <a href="suppliers.html">Suppliers</a>
+    </div>
+    <div class="header">
+        <h1>BRUH TECH</h1>
+        <h2>Products</h2>
+        <p>This page is for managing products</p>
+    </div>
+    <table>
+        <tr>
+            <th colspan="4">Products</th>
+        </tr>
+        <tr>
+            <th>productID</th>
+            <th>productName</th>
+            <th>productPrice</th>
+            <th>productStock</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>Intel i9</td>
+            <td>1000</td>
+            <td>21</td>
+        </tr>
+    </table>
+
+    <form action="">
+        <p>Add Product</p>
+        <label for="name">Product Name:</label>
+        <input type="text" id="name" name="name"><br><br>
+        <label for="price">Product Price:</label>
+        <input type="text" id="price" name="price"><br><br>
+        <label for="stock">Product Stock:</label>
+        <input type="text" id="stock" name="stock"><br><br>
+        <input type="submit" value="Add">
+    </form>
+
+
+    <form id="update" action="">
+        <p>Update Product</p>
+        <label for="updateproductID">Product ID:</label>
+        <input type="text" id="updateproductID" name="updateproductID"><br><br>
+        <label for="updateproductName">Product Name:</label>
+        <input type="text" id="updateproductName" name="updateproductName"><br><br>
+        <label for="updateproductPrice">Product Price:</label>
+        <input type="text" id="updateproductPrice" name="updateproductPrice"><br><br>
+        <label for="updateproductStock">Product Stock:</label>
+        <input type="text" id="updateproductStock" name="updateproductStock"><br><br>
+        <input type="submit" value="Update">
+    </form>
 
 </body>
+
 </html>
