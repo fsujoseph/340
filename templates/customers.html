@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <link rel="stylesheet" href="customersstyling.css">
+    <link rel="stylesheet" href="../static/customersstyling.css">
     <meta charset="UTF-8">
     <title>Customers</title>
 </head>
@@ -32,20 +32,14 @@
             <th>customerState</th>
             <th>customerPhone</th>
         </tr>
-        <tr>
-            <td>1</td>
-            <td>averagejoe@gmail.com</td>
-            <td>Average</td>
-            <td>Joe</td>
-            <td>Blue Ridge Parkway</td>
-            <td>28715</td>
-            <td>Asheville</td>
-            <td>North Carolina</td>
-            <td>123-456-7890</td>
-        </tr>
+            <tr>
+                {% for cell in data %}
+            <td>{{ cell }}</td>
+                {% endfor %}
+            </tr>
     </table>
 
-    <form action="">
+    <<form method="POST">
         <p>Add Customer</p>
         <label for="email">Email:</label>
         <input type="text" id="email" name="email"><br><br>
@@ -63,8 +57,8 @@
         <input type="text" id="state" name="state"><br><br>
         <label for="phone">Phone:</label>
         <input type="text" id="phone" name="phone"><br><br>
-        <label for="citizienID">Citizen ID:</label>
-        <input type="text" id="citizienID" name="citizienID"><br><br>
+        <label for="citizenID">Citizen ID:</label>
+        <input type="text" id="citizenID" name="citizenID"><br><br>
         <input type="submit" value="Add">
     </form>
 
