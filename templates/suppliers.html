@@ -9,7 +9,7 @@
 
 <body>
     <div class="navbar">
-        <a href="index.html">Home</a>
+        <a href="/">Home</a>
         <a href="customers.html">Customers</a>
         <a href="products.html">Products</a>
         <a href="orders.html">Orders</a>
@@ -39,25 +39,29 @@
             <th>supplierURL</th>
             <th>supplierNote</th>
         </tr>
-        <tr>
-            <td>1</td>
-            <td>1</td>
-            <td>Intel</td>
-            <td>Joe Dirt</td>
-            <td>Golden Gate Bridge</td>
-            <td>94129</td>
-            <td>San Francisco</td>
-            <td>California</td>
-            <td>+1-212-987-6542</td>
-            <td>+1-212-987-6543</td>
-            <td>intel@help.com</td>
-            <td>intel.com</td>
-            <td>Null</td>
-        </tr>
+            {% for cell in data %}
+            <tr>
+
+            <td>{{ cell[0] }}</td>
+            <td>{{ cell[1] }}</td>
+            <td>{{ cell[2] }}</td>
+            <td>{{ cell[3] }}</td>
+            <td>{{ cell[4] }}</td>
+            <td>{{ cell[5] }}</td>
+            <td>{{ cell[6] }}</td>
+            <td>{{ cell[7] }}</td>
+            <td>{{ cell[8] }}</td>
+            <td>{{ cell[9] }}</td>
+            <td>{{ cell[10] }}</td>
+            <td>{{ cell[11] }}</td>
+            <td>{{ cell[12] }}</td>
+
+            </tr>
+            {% endfor %}
     </table>
 
 
-    <form id="add" action="">
+    <form id="add" action="/suppliers.html" method="post">
         <p>Add New Supplier</p>
         <label for="productID">Product ID:</label>
         <input type="text" id="productID" name="productID"><br><br>

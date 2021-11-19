@@ -29,20 +29,22 @@
             <th>customerID</th>
             <th>orderDate</th>
         </tr>
+        {% for cell in order_data %}
         <tr>
-            <td>1</td>
-            <td>1</td>
-            <td>12/21/2012</td>
+            <td>{{ cell[0] }}</td>
+            <td>{{ cell[1] }}</td>
+            <td>{{ cell[2] }}</td>
         </tr>
+        {% endfor %}
 
     </table>
 
-    <form action="">
+    <form method="POST">
         <p>Add Order</p>
-        <label for="custID">Customer ID:</label>
-        <input type="text" id="custID" name="custID"><br><br>
-        <label for="date">Order Date:</label>
-        <input type="text" id="date" name="date"><br><br>
+        <label for="customerID">Customer ID:</label>
+        <input type="text" id="customerID" name="customerID"><br><br>
+        <label for="orderDate">Order Date:</label>
+        <input type="text" id="orderDate" name="orderDate"><br><br>
         <input type="submit" value="Add">
     </form>
 

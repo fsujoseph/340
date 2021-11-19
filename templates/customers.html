@@ -31,15 +31,26 @@
             <th>customerCity</th>
             <th>customerState</th>
             <th>customerPhone</th>
+            <th>customerCitizenID</th>
         </tr>
-            <tr>
-                {% for cell in data %}
-            <td>{{ cell }}</td>
-                {% endfor %}
-            </tr>
+
+        {% for cell in customer_data %}
+        <tr>
+            <td>{{ cell[0] }}</td>
+            <td>{{ cell[1] }}</td>
+            <td>{{ cell[2] }}</td>
+            <td>{{ cell[3] }}</td>
+            <td>{{ cell[4] }}</td>
+            <td>{{ cell[5] }}</td>
+            <td>{{ cell[6] }}</td>
+            <td>{{ cell[7] }}</td>
+            <td>{{ cell[8] }}</td>
+            <td>{{ cell[9] }}</td>
+        </tr>
+        {% endfor %}
     </table>
 
-    <<form method="POST">
+    <form method="POST">
         <p>Add Customer</p>
         <label for="email">Email:</label>
         <input type="text" id="email" name="email"><br><br>

@@ -9,7 +9,7 @@
 
 <body>
     <div class="navbar">
-        <a href="index.html">Home</a>
+        <a href="/">Home</a>
         <a href="customers.html">Customers</a>
         <a href="products.html">Products</a>
         <a href="orders.html">Orders</a>
@@ -30,15 +30,19 @@
             <th>productPrice</th>
             <th>productStock</th>
         </tr>
-        <tr>
-            <td>1</td>
-            <td>Intel i9</td>
-            <td>1000</td>
-            <td>21</td>
-        </tr>
+            {% for cell in data %}
+            <tr>
+
+            <td>{{ cell[0] }}</td>
+            <td>{{ cell[1] }}</td>
+            <td>{{ cell[2] }}</td>
+            <td>{{ cell[3] }}</td>
+
+            </tr>
+            {% endfor %}
     </table>
 
-    <form action="">
+    <form action="/products.html" method="post">
         <p>Add Product</p>
         <label for="name">Product Name:</label>
         <input type="text" id="name" name="name"><br><br>
