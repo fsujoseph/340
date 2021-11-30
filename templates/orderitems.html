@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="../static/orderitemsstyling.css">
+    <meta charset="UTF-8">
+    <title>Order-Items</title>
+</head>
+
+<body>
+    <div class="navbar">
+        <a href="/">Home</a>
+        <a href="customers.html">Customers</a>
+        <a href="products.html">Products</a>
+        <a href="orders.html">Orders</a>
+        <a href="suppliers.html">Suppliers</a>
+        <a href="orderitems.html">Order-Items</a>
+    </div>
+    <div class="header">
+        <h1>BRUH TECH</h1>
+        <h2>Order-Items</h2>
+        <p>This page is for adding items to an order</p>
+    </div>
+    <table>
+        <tr>
+            <th>orderItemID</th>
+            <th>orderItemQuantity</th>
+            <th>productID</th>
+            <th>orderID</th>
+        </tr>
+
+        {% for cell in order_items %}
+        <tr>
+            <td>{{ cell[0] }}</td>
+            <td>{{ cell[1] }}</td>
+            <td>{{ cell[2] }}</td>
+            <td>{{ cell[3] }}</td>
+        </tr>
+        {% endfor %}
+
+        {% for cell in order_item %}
+        <tr>
+            <td>{{ cell[0] }}</td>
+            <td>{{ cell[1] }}</td>
+            <td>{{ cell[2] }}</td>
+            <td>{{ cell[3] }}</td>
+        </tr>
+        {% endfor %}
+
+
+    </table>
+    <form method="POST">
+        <p>Add to order</p>
+        <label for="quantity">Item quantity:</label>
+        <input type="text" id="quantity" name="quantity">
+        <label for="productID">Product ID:</label>
+        <select id="productID" name="productID">
+          {% for entry in product_ids %}
+          <option value="{{entry[0]}}">{{entry[0]}}</option>
+          {% endfor %}
+        </select>
+
+        <label for="orderID">Order ID:</label>
+        <select id="orderID" name="orderID">
+          {% for entry in order_ids %}
+          <option value="{{entry[0]}}">{{entry[0]}}</option>
+          {% endfor %}
+        </select>
+
+        <input type="submit" value="Add">
+    </form>
+
+    <form method="POST">
+        <p>Remove from order</p>
+        <label for="orderItemID">OrderItem ID:</label>
+        <select id="orderItemID" name="orderItemID">
+          {% for entry in order_item_ids %}
+          <option value="{{entry[0]}}">{{entry[0]}}</option>
+          {% endfor %}
+        </select>
+
+        <input type="submit" value="Remove">
+    </form>
+
+</body>
+</html>

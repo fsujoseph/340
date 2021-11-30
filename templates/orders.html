@@ -9,11 +9,12 @@
 
 <body>
     <div class="navbar">
-        <a href="index.html">Home</a>
+        <a href="/">Home</a>
         <a href="customers.html">Customers</a>
         <a href="products.html">Products</a>
         <a href="orders.html">Orders</a>
         <a href="suppliers.html">Suppliers</a>
+        <a href="orderitems.html">Order-Items</a>
     </div>
     <div class="header">
         <h1>BRUH TECH</h1>
@@ -42,13 +43,27 @@
     <form method="POST">
         <p>Add Order</p>
         <label for="customerID">Customer ID:</label>
-        <input type="text" id="customerID" name="customerID"><br><br>
+        <select id="customerID" name="customerID">
+          {% for entry in list_data %}
+          <option value="{{entry[0]}}">{{entry[0]}}</option>
+          {% endfor %}
+        </select><br><br>
         <label for="orderDate">Order Date:</label>
-        <input type="text" id="orderDate" name="orderDate"><br><br>
+        <input type="text" id="orderDate" name="orderDate">
         <input type="submit" value="Add">
     </form>
 
+    <form method="POST">
+        <p>Delete Order</p>
+        <label for="orderID">Order ID:</label>
+        <select id="orderID" name="orderID">
+          {% for entry in order_ids %}
+          <option value="{{entry[0]}}">{{entry[0]}}</option>
+          {% endfor %}
+        </select>
 
+        <input type="submit" value="Delete">
+    </form>
 
 </body>
 

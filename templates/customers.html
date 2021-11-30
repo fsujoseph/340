@@ -9,11 +9,12 @@
 
 <body>
     <div class="navbar">
-        <a href="index.html">Home</a>
+        <a href="/">Home</a>
         <a href="customers.html">Customers</a>
         <a href="products.html">Products</a>
         <a href="orders.html">Orders</a>
         <a href="suppliers.html">Suppliers</a>
+        <a href="orderitems.html">Order-Items</a>
     </div>
     <div class="header">
         <h1>BRUH TECH</h1>
@@ -48,6 +49,22 @@
             <td>{{ cell[9] }}</td>
         </tr>
         {% endfor %}
+
+        {% for cell in select_customer %}
+        <tr>
+            <td>{{ cell[0] }}</td>
+            <td>{{ cell[1] }}</td>
+            <td>{{ cell[2] }}</td>
+            <td>{{ cell[3] }}</td>
+            <td>{{ cell[4] }}</td>
+            <td>{{ cell[5] }}</td>
+            <td>{{ cell[6] }}</td>
+            <td>{{ cell[7] }}</td>
+            <td>{{ cell[8] }}</td>
+            <td>{{ cell[9] }}</td>
+        </tr>
+        {% endfor %}
+
     </table>
 
     <form method="POST">
@@ -73,10 +90,20 @@
         <input type="submit" value="Add">
     </form>
 
-    <form id="delete" action="">
+    <form method="POST">
+        <p>Find Customer</p>
+        <label for="customerID">Customer ID:</label>
+        <input type="text" id="customerID" name="customerID">
+        <input type="submit" value="Search">
+    </form>
+
+    <form id="delete" action="/delete">
         <p>Delete Customer</p>
         <label for="deletecustomerID">Customer ID:</label>
-        <input type="text" id="deletecustomerID" name="deletecustomerID"><br><br>
+        <select id="deletecustomerID" name="deletecustomerID">
+          {% for entry in list_data %}
+          <option value="{{entry[0]}}">{{entry[0]}}</option>
+          {% endfor %}
         <input type="submit" value="Delete">
     </form>
 
