@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="../static/productsstyling.css">
+    <meta charset="UTF-8">
+    <title>Products</title>
+</head>
+
+<body>
+    <div class="navbar">
+        <a href="/">Home</a>
+        <a href="customers.html">Customers</a>
+        <a href="products.html">Products</a>
+        <a href="orders.html">Orders</a>
+        <a href="suppliers.html">Suppliers</a>
+    </div>
+    <div class="header">
+        <h1>BRUH TECH</h1>
+        <h2>Update Products</h2>
+        <p>This page is for updating products</p>
+    </div>
+
+
+    <form action="/update" method="post">
+        <p>Update Product</p>
+        <label for="updateproductID">Product ID:</label>
+        <input type="text" id="updateproductID" name="updateproductID" value="{{ data[0] }}" readonly><br><br>
+        <label for="updateproductName">Product Name:</label>
+        <input type="text" id="updateproductName" name="updateproductName" value="{{ data[1] }}" ><br><br>
+        <label for="updateproductPrice">Product Price:</label>
+        <input type="text" id="updateproductPrice" name="updateproductPrice" value="{{ data[2] }}" ><br><br>
+        <label for="updateproductStock">Product Stock:</label>
+        <input type="text" id="updateproductStock" name="updateproductStock" value="{{ data[3] }}" ><br><br>
+        <input type="submit" value="Update">
+    </form>
+
+</body>
+
+</html>
