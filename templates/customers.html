@@ -92,21 +92,21 @@
 
     <form method="POST">
         <p>Find Customer</p>
-        <label for="customerID">Customer ID:</label>
-        <input type="text" id="customerID" name="customerID">
+        <label for="searchCustomerID">Customer ID:</label>
+        <input type="text" id="searchCustomerID" name="searchCustomerID">
         <input type="submit" value="Search">
     </form>
 
-    <form id="delete" action="/delete">
+    <form method="POST">
         <p>Delete Customer</p>
-        <label for="deletecustomerID">Customer ID:</label>
-        <select id="deletecustomerID" name="deletecustomerID">
+        <label for="deleteCustomerID">Customer ID:</label>
+        <select id="deleteCustomerID" name="deleteCustomerID">
           {% for entry in list_data %}
           <option value="{{entry[0]}}">{{entry[0]}}</option>
           {% endfor %}
+        </select>
         <input type="submit" value="Delete">
     </form>
 
 </body>
-
 </html>

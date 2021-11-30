@@ -43,25 +43,32 @@
             {% endfor %}
     </table>
 
-    <form action="/products.html" method="post">
+    <form method="POST">
         <p>Add Product</p>
         <label for="name">Product Name:</label>
-        <input type="text" id="name" name="name"><br><br>
+        <input type="text" id="name" name="name">
         <label for="price">Product Price:</label>
-        <input type="text" id="price" name="price"><br><br>
+        <input type="text" id="price" name="price">
         <label for="stock">Product Stock:</label>
-        <input type="text" id="stock" name="stock"><br><br>
+        <input type="text" id="stock" name="stock">
         <input type="submit" value="Add">
     </form>
 
 
-    <form action="/update">
+    <form method="POST">
         <p>Update Product</p>
-        <label for="updateproductID">Product ID:</label>
-        <select id="updateproductID" name="updateproductID">
+        <label for="productID">Product ID:</label>
+        <select id="productID" name="productID">
           {% for entry in list_data %}
           <option value="{{entry[0]}}">{{entry[0]}}</option>
-          {% endfor %}<br><br>
+          {% endfor %}
+        </select>
+        <label for="updateName">Product Name:</label>
+        <input type="text" id="updateName" name="updateName">
+        <label for="updatePrice">Product Price:</label>
+        <input type="text" id="updatePrice" name="updatePrice">
+        <label for="updateStock">Product Stock:</label>
+        <input type="text" id="updateStock" name="updateStock">
         <input type="submit" value="Update">
     </form>
 
